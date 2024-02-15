@@ -1,0 +1,34 @@
+npm init
+npm install cypress --save-dev
+npm install npx
+npx cypress open
+
+https://kailash-pathak.medium.com/cypress-13-integration-with-bdd-cucumber-pom-a367f534b363
+BDD:
+from above link start from Installing Cucumber
+Step 1:(do all steps)
+
+npm install --save-dev cypress-cucumber-preprocessor
+
+check for step no 4 give proper patha
+
+
+-------------------------------------------------
+
+to use @variable for running single or only targeted test sceniro 
+followung lines need to save in config in define config block
+
+
+  env: {
+    "TAGS": "not @ignore"
+  }, 
+
+
+  following commands is used to running
+  # npx cypress run --env TAGS="@focus" --headed --browser chrome
+# npx cypress run --env TAGS="@focus" --headed --browser chrome
+
+
+
+repo of sarika maam for BDD
+https://github.com/sarikasp/NewBDD
