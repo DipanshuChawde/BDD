@@ -1,3 +1,5 @@
+//import fx from "../../../../fixtures/AEsignup.json"
+
 class HomePage{
 
     selector = {
@@ -20,7 +22,31 @@ class HomePage{
         textValidate : '.signup-form >h2',
         userNameS : '[data-qa="signup-name"] ',
         userEmailS :'[data-qa="signup-email"] ',
-        signUpBtn : '[data-qa="signup-button"] '
+        signUpBtn : '[data-qa="signup-button"] ',
+        mrsbtn : '#id_gender2',
+        mrbtn : '#id_gender1',
+        pw : '#password',
+        day : '#days',
+        month : '#months',
+        year : '#years',
+        newsletter : '#newsletter',
+        optin : '#optin',
+        fname : '#first_name',
+        lname : '#last_name',
+        company : '#company',
+        address1 : '#address1',
+        address2 : '#address2',
+        country : '#country',
+        state : '#state',
+        city : '#city',
+        zipcode : '#zipcode',
+        mobno : '#mobile_number',
+        creatacc : '[data-qa="create-account"]',
+        acccreatedtxt : '.title.text-center > b',
+        loginemail : '[data-qa="login-email"]',
+        loginpw : '[data-qa="login-password"]',
+        loginbtn : '[data-qa="login-button"]',
+        logout : 'a[href="/logout"]'
 
 
     }
@@ -71,12 +97,42 @@ class HomePage{
     textValaditation(css,text){
         cy.get(css).should('have.text',text)
     }
+    //Automation Exercise
+    userSignUp(user){
+        cy.get(this.selector.userNameS).type(user.name)
+        cy.get(this.selector.userEmailS).type(user.email)
+    }
 
-    userSignUp(){
-        cy.get(this.selector.userNameS).type('dipanshu')
-        cy.get(this.selector.userEmailS).type('dipanshu@gmail.com')
+    //Automation Exercise
+
+    CreateUser(user){
+        cy.get(this.selector.mrsbtn).click()
+        cy.get(this.selector.pw).type(user.password)
+        cy.get(this.selector.day).type(user.day)
+        cy.get(this.selector.month).type(user.month)
+        cy.get(this.selector.year).type(user.year)
+        cy.get(this.selector.newsletter).click()
+        cy.get(this.selector.optin).click()
+        cy.get(this.selector.fname).type(user.fname)
+        cy.get(this.selector.lname).type(user.lname)
+        cy.get(this.selector.company).type(user.company)
+        cy.get(this.selector.address1).type(user.address1)
+        cy.get(this.selector.address2).type(user.address2)
+        cy.get(this.selector.country).select(user.country)
+        cy.get(this.selector.state).type(user.state)
+        cy.get(this.selector.city).type(user.city)
+        cy.get(this.selector.zipcode).type(user.zipcode)
+        cy.get(this.selector.mobno).type(user.mobno)
+    }
+
+    //Automation Exercise
+    userLogin(user){
+        cy.get(this.selector.logout).click()
+        cy.get(this.selector.loginemail).type(user.email)
+        cy.get(this.selector.loginpw).type(user.password)
 
     }
+
 
 }
 

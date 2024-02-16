@@ -2,7 +2,9 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
 import HomePage from "../home"
 
+
 let selector=new HomePage
+
 
 Given('open ecommerseGK GreenKart',()=>{
     selector.visitUrl(selector.selector.GKUrl)
