@@ -32,3 +32,25 @@ followung lines need to save in config in define config block
 
 repo of sarika maam for BDD
 https://github.com/sarikasp/NewBDD
+
+
+
+for report 
+
+
+
+
+
+
+for shadow dom
+
+# we can not inspect shadow dom element . 
+# it is written under #shadow root.
+# if you can not able to inspect any element in that case that may be shadow element         
+
+# there are tow types of to get that type of element 
+# 1. to use shadow method 
+# 2. update following line in  below e2e in config.js file and re run code in browser 
+
+changes are made in config.js file 
+included following line in config.js below e2e "includeShadowDom: true,"
