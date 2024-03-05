@@ -17,7 +17,7 @@ module.exports = defineConfig({
 
   e2e: {
     includeShadowDom: true,
-    specPattern: "**/*.feature",
+    specPattern: ["**/*.feature", "**/*.cy.js"],
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on("file:preprocessor", cucumber());

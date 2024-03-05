@@ -29,18 +29,18 @@ followung lines need to save in config in define config block
 # npx cypress run --env TAGS="@focus" --headed --browser chrome
 
 
-
+-------------------------------------------------------------------------------------------
 repo of sarika maam for BDD
 https://github.com/sarikasp/NewBDD
 
-
+------------------------------------------------------------------------------------------
 
 for report 
 
 
 
 
-
+------------------------------------------------------------------------------------------
 
 for shadow dom
 
@@ -54,3 +54,25 @@ for shadow dom
 
 changes are made in config.js file 
 included following line in config.js below e2e "includeShadowDom: true,"
+
+----------------------------------------------------------------------------------------
+custom commands
+
+
+
+
+----------------------------------------------------------------------------------------
+
+Environment 
+
+1. create one production.config.js file in main project outside every folder
+2. create one staging.config.js file in main project outside every folder
+
+create 
+
+
+
+
+
+
+
